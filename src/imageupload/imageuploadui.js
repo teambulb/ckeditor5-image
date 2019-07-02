@@ -47,6 +47,20 @@ export default class ImageUploadUI extends Plugin {
 
 			view.buttonView.bind( 'isEnabled' ).to( command );
 
+			// Callback executed once the button is clicked:
+			view.on('execute', (event) => {
+
+				let customEvent = new CustomEvent('bulbInsertImage',{
+					detail : {
+						event: event,
+						eventFiredFromEditor : true
+					}
+				});
+
+				// dispatch the event on the global window object so our AngularJs code may work?
+				window.dispatchEvent(customEvent);
+			});
+
 			view.on( 'done', ( evt, files ) => {
 				const imagesToUpload = Array.from( files ).filter( isImageType );
 
