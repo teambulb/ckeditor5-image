@@ -31,7 +31,7 @@ export default class ImageUploadUI extends Plugin {
 
 		// Setup `imageUpload` button.
 		editor.ui.componentFactory.add( 'imageUpload', locale => {
-			const view = new FileDialogButtonView( locale );
+			const view = new ButtonView( locale );
 			const command = editor.commands.get( 'imageUpload' );
 
 			view.set( {
