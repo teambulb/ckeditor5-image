@@ -63,15 +63,21 @@ export default class ImageUploadUI extends Plugin {
 
 				// dispatch the event on the global window object so our AngularJs code may work?
 				window.dispatchEvent(customEvent);
+
+
+				window.addEventListener('bulbImageFile', (data) => {
+					console.log('the bulb data:', data);
+				});
+
 			});
 
-			view.on( 'done', ( evt, files ) => {
-				const imagesToUpload = Array.from( files ).filter( isImageType );
-
-				if ( imagesToUpload.length ) {
-					editor.execute( 'imageUpload', { file: imagesToUpload } );
-				}
-			} );
+			// view.on( 'done', ( evt, files ) => {
+			// 	const imagesToUpload = Array.from( files ).filter( isImageType );
+			//
+			// 	if ( imagesToUpload.length ) {
+			// 		editor.execute( 'imageUpload', { file: imagesToUpload } );
+			// 	}
+			// } );
 
 			return view;
 		} );
