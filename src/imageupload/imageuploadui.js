@@ -8,7 +8,10 @@
  */
 
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
-import FileDialogButtonView from '@ckeditor/ckeditor5-upload/src/ui/filedialogbuttonview';
+
+// Added this our own:
+import ButtonView from '@ckeditor/ckeditor5-ui/src/button/buttonview';
+
 import imageIcon from '@ckeditor/ckeditor5-core/theme/icons/image.svg';
 import { isImageType } from './utils';
 
