@@ -42,13 +42,14 @@ export default class ImageUploadUI extends Plugin {
 				allowMultipleFiles: true
 			} );
 
-			view.buttonView.set( {
-				label: t( 'Insert image' ),
-				icon: imageIcon,
+			// This was changed from the native dialog box to the button ui on the editor toolbar:
+			view.set({
+				label: 'Insert Bulb Image',
+				icon : imageIcon,
 				tooltip: true
-			} );
+			});
 
-			view.buttonView.bind( 'isEnabled' ).to( command );
+			view.bind( 'isEnabled' ).to( command );
 
 			// Callback executed once the button is clicked:
 			view.on('execute', (event) => {
