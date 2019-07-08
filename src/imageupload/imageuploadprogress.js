@@ -84,6 +84,8 @@ export default class ImageUploadProgress extends Plugin {
 		// Show progress bar on the top of the image when image is uploading.
 		if ( status == 'uploading' ) {
 			const loader = fileRepository.loaders.get( uploadId );
+			console.log('this is the loader:', loader);
+			console.log(!loader);
 
 			// Start appear effect if needed - see https://github.com/ckeditor/ckeditor5-image/issues/191.
 			_startAppearEffect( viewFigure, viewWriter );
@@ -93,8 +95,11 @@ export default class ImageUploadProgress extends Plugin {
 				// In such cases we still want to show the placeholder until image is fully uploaded.
 				// Show placeholder if needed - see https://github.com/ckeditor/ckeditor5-image/issues/191.
 				_showPlaceholder( placeholder, viewFigure, viewWriter );
+				console.log('the first if in the if part');
+				_showProgressBar( viewFigure, viewWriter, loader, editor.editing.view );
 			} else {
 				// Hide placeholder and initialize progress bar showing upload progress.
+				console.log('in the else part');
 				_hidePlaceholder( viewFigure, viewWriter );
 				_showProgressBar( viewFigure, viewWriter, loader, editor.editing.view );
 			}
