@@ -180,7 +180,7 @@ function _showProgressBar( viewFigure, writer, loader, view ) {
 
 	// Update progress bar width when uploadedPercent is changed.
 	loader.on( 'change:uploadedPercent', ( evt, name, value ) => {
-		console.log('in the change:uploadPercent event being fired', evt, name, value,);
+		console.log('in the change:uploadPercent event being fired', evt, name, value);
 		view.change( writer => {
 			writer.setStyle( 'width', value + '%', progressBar );
 		} );
