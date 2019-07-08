@@ -60,8 +60,6 @@ export default class ImageUploadCommand extends Command {
 
 		const fileRepository = editor.plugins.get( FileRepository );
 
-		console.log('what are the options passed in the imageuploadcommand?', options);
-
 		model.change( writer => {
 			const filesToUpload = Array.isArray( options.file ) ? options.file : [ options.file ];
 

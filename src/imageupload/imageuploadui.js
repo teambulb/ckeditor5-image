@@ -54,7 +54,6 @@ export default class ImageUploadUI extends Plugin {
 
 			// Callback executed once the button is clicked:
 			view.on('execute', (event) => {
-				console.log('we are in here?');
 				let customEvent = new CustomEvent('bulbInsertImage',{
 					detail : {
 						event: event,
@@ -67,7 +66,6 @@ export default class ImageUploadUI extends Plugin {
 
 
 				window.addEventListener('bulbImageFile', (data) => {
-					console.log('the bulb data:', data.detail.file);
 					const bulbImageFile = data.detail.file;
 
 					// const imagesToUpload = Array.from( bulbImageFile ).filter( isImageType );
