@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="015bc475-a801-4b48-808e-78ba7b9b252b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/imageupload/imageuploadprogress.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageupload/imageuploadprogress.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -32,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/src/imageupload/imageuploadediting.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="385">
-              <caret line="50" column="36" lean-forward="true" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
+              <caret line="50" column="36" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -52,8 +51,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/imageupload/imageuploadprogress.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="577">
-              <caret line="101" column="48" selection-start-line="101" selection-start-column="48" selection-end-line="101" selection-end-column="48" />
+            <state relative-caret-position="357">
+              <caret line="184" column="33" lean-forward="true" selection-start-line="184" selection-start-column="33" selection-end-line="184" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -63,6 +62,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>progress</find>
+      <find>uploadedPercent</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -151,18 +151,18 @@
       <option name="presentableId" value="Default" />
       <updated>1562093490487</updated>
       <workItem from="1562093491670" duration="5196000" />
-      <workItem from="1562109131506" duration="10631000" />
+      <workItem from="1562109131506" duration="11120000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15827000" />
+    <option name="totallyTimeSpent" value="16316000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1403" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2496382" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2496382" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -217,13 +217,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/imageupload/imageuploadediting.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="50" column="36" lean-forward="true" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/imageupload/imageuploadcommand.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="674">
@@ -231,6 +224,13 @@
           <folding>
             <element signature="e#181#256#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/imageupload/imageuploadediting.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="50" column="36" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -246,8 +246,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/imageupload/imageuploadprogress.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="101" column="48" selection-start-line="101" selection-start-column="48" selection-end-line="101" selection-end-column="48" />
+        <state relative-caret-position="357">
+          <caret line="184" column="33" lean-forward="true" selection-start-line="184" selection-start-column="33" selection-end-line="184" selection-end-column="33" />
         </state>
       </provider>
     </entry>
