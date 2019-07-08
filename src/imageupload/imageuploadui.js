@@ -68,15 +68,14 @@ export default class ImageUploadUI extends Plugin {
 
 				window.addEventListener('bulbImageFile', (data) => {
 					console.log('the bulb data:', data.detail.file);
-
 					const bulbImageFile = data.detail.file;
-					// CKEditor gracefully handles uploading multiple imgaes, we don't unfortunately. This code is not going
-					// To change however since we will support it in the future.
-					const imagesToUpload = Array.from( bulbImageFile ).filter( isImageType );
 
-					if ( imagesToUpload.length ) {
-						editor.execute( 'imageUpload', { file: imagesToUpload } );
-					}
+					// const imagesToUpload = Array.from( bulbImageFile ).filter( isImageType );
+					// if ( imagesToUpload.length ) {
+
+					editor.execute( 'imageUpload', { file: bulbImageFile } );
+
+					// }
 
 				});
 

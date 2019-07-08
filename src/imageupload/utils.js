@@ -16,6 +16,7 @@
  * @returns {Boolean}
  */
 export function isImageType( file ) {
+	// bulb change.
 	const types = /(\.|\/)(gif|jpe?g|png|psd|ico|tiff?|pnm|iff|pict|pcx|sgi|tga)$/i;
 	// const types = /^image\/(jpeg|png|gif|bmp)$/;
 	return types.test( file.type );
