@@ -60,17 +60,15 @@ export default class ImageUploadCommand extends Command {
 
 		const fileRepository = editor.plugins.get( FileRepository );
 
-		window.addEventListener('bulbImageFile', (event, data) => {
-			console.log('deep in the code:', event, data);
-		});
+		console.log('what are the options passed in the imageuploadcommand?', options);
 
-		// model.change( writer => {
-		// 	const filesToUpload = Array.isArray( options.file ) ? options.file : [ options.file ];
-		//
-		// 	for ( const file of filesToUpload ) {
-		// 		uploadImage( writer, model, fileRepository, file );
-		// 	}
-		// } );
+		model.change( writer => {
+			const filesToUpload = Array.isArray( options.file ) ? options.file : [ options.file ];
+
+			for ( const file of filesToUpload ) {
+				uploadImage( writer, model, fileRepository, file );
+			}
+		} );
 	}
 }
 

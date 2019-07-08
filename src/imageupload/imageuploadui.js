@@ -34,6 +34,7 @@ export default class ImageUploadUI extends Plugin {
 
 		// Setup `imageUpload` button.
 		editor.ui.componentFactory.add( 'imageUpload', locale => {
+			// bulb change -- Changed from using the FileDialogButtonView Button type.
 			const view = new ButtonView( locale );
 			const command = editor.commands.get( 'imageUpload' );
 
@@ -66,18 +67,20 @@ export default class ImageUploadUI extends Plugin {
 
 
 				window.addEventListener('bulbImageFile', (data) => {
-					console.log('the bulb data:', data);
+					console.log('the bulb data:', data.detail.file);
+
+					const bulbImageFile = data.detail.file;
+					// CKEditor gracefully handles uploading multiple imgaes, we don't unfortunately. This code is not going
+					// To change however since we will support it in the future.
+					const imagesToUpload = Array.from( bulbImageFile ).filter( isImageType );
+
+					if ( imagesToUpload.length ) {
+						editor.execute( 'imageUpload', { file: imagesToUpload } );
+					}
+
 				});
 
 			});
-
-			// view.on( 'done', ( evt, files ) => {
-			// 	const imagesToUpload = Array.from( files ).filter( isImageType );
-			//
-			// 	if ( imagesToUpload.length ) {
-			// 		editor.execute( 'imageUpload', { file: imagesToUpload } );
-			// 	}
-			// } );
 
 			return view;
 		} );

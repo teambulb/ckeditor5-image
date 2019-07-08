@@ -16,8 +16,8 @@
  * @returns {Boolean}
  */
 export function isImageType( file ) {
+	// TODO FUTURE: Add more supported types for CKEditor to handle.
 	const types = /^image\/(jpeg|png|gif|bmp)$/;
-
 	return types.test( file.type );
 }
 
